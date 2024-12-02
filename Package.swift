@@ -4,18 +4,26 @@
 import PackageDescription
 
 let package = Package(
-    name: "AdventOfCode",
-    products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "AdventOfCode",
-            targets: ["AdventOfCode"]),
+    name: "advent-of-code",
+    platforms: [.macOS(.v15)],
+    dependencies: [
+        .package(url: "https://github.com/pointfreeco/swift-parsing", from: "0.13.0"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "AdventOfCode"),
-
+            name: "Advent2024",
+            dependencies: [
+                .product(name: "Parsing", package: "swift-parsing")
+            ]
+        ),
+        .testTarget(
+            name: "Advent2024Tests",
+            dependencies: ["Advent2024"],
+            resources: [
+                .process("Inputs")
+            ]
+        )
     ]
 )
