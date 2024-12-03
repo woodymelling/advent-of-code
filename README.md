@@ -5,7 +5,7 @@
 | Day  | Puzzle Name         | Part 1 | Part 2 | Total Stars |
 |------|---------------------|-----------|-----------|-------------|
 | 1 | Historian Histeria | ⭐ | ⭐ | 2 |
-| 2 |        |           |  | |
+| 2 | Red-Nosed Reports | ⭐ | ⭐ | 4 |
 | 3 |        |           |  | |
 | 4 |        |           |  | |
 | 5 |        |           |  | |
